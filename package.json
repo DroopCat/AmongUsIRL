@@ -1,0 +1,15 @@
+{
+  "name": "auirl",
+  "version": "1.0.0",
+  "description": "Among us in real life",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "DroopCat",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^7.3.1"
+  }
+}

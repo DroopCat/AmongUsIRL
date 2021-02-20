@@ -1,0 +1,339 @@
+html body {
+  margin: 0px;
+  font-family: "Rubik", sans-serif;
+  background-color: black;
+  overscroll-behavior: none;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,400&display=swap");
+
+/* Setup Menus */
+#setup > * {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* Username setup menu */
+#usernamemenu {
+  z-index: 19;
+  background-color: black;
+  display: grid;
+  grid-template-rows: minmax(150px, 30%) 1fr minmax(60px, 20%);
+}
+#usernamemenu > h1 {
+  margin: auto;
+  color: white;
+  font-size: 40pt;
+  font-weight: 700;
+  text-align: center;
+}
+#usernamemenu > form {
+  margin: auto;
+  width: 80%;
+}
+#username {
+  text-indent: 20px;
+  display: block;
+  outline: none;
+  font-size: 30pt;
+  height: 60px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  border: 5px solid #464646;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  margin: auto;
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+#username:focus {
+  border: 5px solid #5f5f5f !important;
+}
+.next {
+  height: 50px;
+  width: 80%;
+  max-width: 350px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: dodgerblue;
+  display: grid;
+}
+.next h3 {
+  margin: auto;
+  text-align: center;
+}
+
+/* Permissions setup menu */
+#permissionsmenu {
+  z-index: 18;
+  display: none;
+  background-color: rgb(0, 0, 0);
+  grid-template-rows: minmax(100px, 30%) 1fr;
+}
+#permissionsmenu > h1 {
+  margin: auto;
+  font-size: 40pt;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+#permbox {
+  width: 80%;
+  margin: auto;
+}
+.permbtn {
+  height: 50px;
+  background-color: coral;
+  border-radius: 20px;
+  margin: 10px;
+  display: grid;
+}
+.permbtn > h3 {
+  margin: auto;
+}
+.permAllowed {
+  background-color: darkgreen;
+}
+
+/* Game already started */
+#gamestarted {
+  z-index: 20;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  /* grid-template-rows: 1fr 3fr; */
+  display: none;
+}
+#gamestarted h1 {
+  margin: auto;
+  font-weight: 700;
+  color: white;
+  font-size: 50pt;
+  text-align: center;
+}
+
+/* Role reveal screen */
+#revealrolescreen {
+  z-index: 17;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 23pt;
+  text-align: center;
+}
+
+/* Lobby */
+#lobby {
+  z-index: 16;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  /* grid-template-rows: 1fr 3fr; */
+  display: none;
+}
+#lobby h1 {
+  margin: auto;
+  font-weight: 700;
+  color: white;
+  font-size: 50pt;
+  text-align: center;
+}
+
+/* Game end screen */
+#gameEndScreen {
+  z-index: 15;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 23pt;
+  text-align: center;
+}
+
+/* Main Game Screen */
+#gamescreen {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 80px 1fr 60px 2fr;
+}
+#gamescreen > * {
+  border-radius: 20px;
+  margin: 5px 10px;
+}
+#taskbar {
+  background-color: #434343;
+  margin-top: 10px;
+  overflow: hidden;
+}
+#taskbar > div {
+  background-color: #2ccc2c;
+  height: 100%;
+  width: 20%;
+  margin-top: 0px;
+  border-radius: 20px 0px 0px 20px;
+  transition: width 1s ease-in-out;
+}
+#deadbutton {
+  background-color: rgb(201, 42, 42);
+  display: grid;
+}
+#deadbutton > p {
+  font-size: 20pt;
+  text-align: center;
+  font-weight: bolder;
+  margin: auto;
+}
+#taskbox {
+  background-color: #b2b2b2;
+  overflow-y: scroll;
+}
+#taskbox > ul {
+  margin: 17px;
+  padding-left: 15px;
+  list-style: none;
+  font-size: 17pt;
+}
+#cramerabox {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* Util */
+.menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+.done {
+  color: green;
+}
+
+/* Kick Screen */
+#kickscreen {
+  z-index: 14;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 23pt;
+  text-align: center;
+}
+
+/* vote screen */
+#votescreen {
+  z-index: 13;
+  grid-template-rows: 10% 1fr 10%;
+}
+#votescreen > h3 {
+  font-size: 20pt;
+  text-align: center;
+  margin: auto;
+}
+#votetimer {
+  margin: auto 20px;
+  display: inline;
+  text-align: right;
+  font-size: 19pt;
+}
+#playerlist {
+  display: grid;
+  overflow-y: scroll;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: max-content;
+  margin: 0px 20px;
+}
+.player {
+  border-radius: 10px;
+  height: 60px;
+  background-color: white;
+  color: black;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+.player > button {
+  border-radius: 20px;
+  font-size: 15pt;
+  margin: 2px;
+  text-decoration: none;
+  border: none;
+}
+#voteButton {
+  background-color: #10ac84;
+  color: black;
+}
+#cancelVoteButton {
+  background-color: #ee5253;
+  color: black;
+}
+
+.player > p {
+  font-size: 20pt;
+  text-align: center;
+  margin: auto;
+}
+.dead {
+  background-color: gray;
+}
+#bottombarthing {
+  display: grid;
+  grid-auto-flow: column;
+}
+#skipbutton {
+  background-color: #0abde3;
+  display: grid;
+  margin: auto;
+  width: 200px;
+  height: 50px;
+  border-radius: 12px;
+}
+#skipbutton > p {
+  color: black;
+  font-size: 20pt;
+  text-align: center;
+  margin: auto;
+}
+
+/* Death Screen */
+#killscreen {
+  z-index: 12;
+  background-color: darkred;
+  color: red;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 23pt;
+  text-align: center;
+}
+#killscreen > img {
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+/* Aminations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Among Us IRL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- game already started thing -->
+    <div id="gamestarted" class="menu" style="display: none;">
+      <h1>Game already started. :(</h1>
+    </div>
+
+    <!-- Setup Menus -->
+    <div id="setup">
+      <div id="usernamemenu">
+        <h1>Pick a<br> username</h1>
+        <form onsubmit="submitUsername();return false" action="javascript:void(0);">
+          <input id="username" type="text" placeholder="Username" autocomplete="off">
+        </form>
+        <div class="next" id="submitusername" onclick="submitUsername();">
+          <h3>Next</h3>
+        </div>
+      </div>
+      <div id="permissionsmenu">
+        <h1>Allow Perms</h1>
+        <div id="permbox">
+          <div id="allowCamera" class="permbtn">
+            <h3>Allow Camera</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reveal role screen -->
+    <div id="revealrolescreen" class="menu" style="display: none;">
+      <h1 id="revealrole"></h1>
+    </div>
+    <!-- Lobby -->
+    <div id="lobby" style="display: none;">
+      <h1>Waiting for the host...</h1>
+    </div>
+    
+    <!-- Game Menus -->
+    <div id="gameEndScreen" class="menu" style="display: none;">
+      <h1 id="winner"></h1>
+    </div>
+
+    <div id="kickscreen" class="menu" style="display: none;">
+      <h1 id="kickname">You</h1>
+      <h2 id="wasImposter">was not the imposter</h2>
+    </div>
+
+    <div id="votescreen" class="menu" style="display: none;">
+      <h3>Time to vote!</h3>
+      <div id="playerlist">
+        <div class="player">
+          <p>bob</p>
+        </div>
+        <div class="player">
+          <p>bob</p>
+        </div>
+        <div class="player">
+          <p>bob</p>
+        </div>
+        <div class="player">
+          <p>bob</p>
+        </div>
+        <div class="player">
+          <p>bob</p>
+        </div>
+      </div>
+      <div id="bottombarthing">
+        <div id="skipbutton">
+          <p>Skip voting</p>
+        </div>
+        <p id="votetimer">--</p>
+      </div>
+    </div>
+
+    <div id="killscreen" class="menu" style="display: none;">
+      <h1>You Died.</h1>
+      <h2>REPORT BOIS!</h2>
+      <img src="assets/imgs/report.png" alt="whooops">
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gamescreen">
+      <div id="taskbar">
+        <div id="actualbar"></div>
+      </div>
+      <div id="taskbox">
+        <ul id="tasklist">
+          <li>Reactor: empty everything</li>
+          <li>Navigation: stabilize garbage</li>
+          <li>Reactor: empty everything</li>
+          <li>Navigation: stabilize garbage</li>
+          <li>Reactor: empty everything</li>
+          <li>Navigation: stabilize garbage</li>
+          <li>Reactor: empty everything</li>
+          <li>Navigation: stabilize garbage</li>
+          <li>Reactor: empty everything</li>
+          <li>Navigation: stabilize garbage</li>
+          <li>Reactor: empty everything</li>
+          <li>Navigation: stabilize garbage</li>
+        </ul>
+      </div>
+      <div id="deadbutton">
+        <p id="impostorticker">killed?</p>
+      </div>
+      <div id="cramerabox">
+
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/libs/html5-qrcode.min.js"></script>
+    <script src="assets/libs/howler.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
